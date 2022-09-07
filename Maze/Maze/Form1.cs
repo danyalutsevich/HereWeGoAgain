@@ -13,6 +13,7 @@ namespace Maze
         }
 
         Labirint labirint;
+        int stepsCount = 0;
 
         public void Options()
         {
@@ -24,7 +25,7 @@ namespace Maze
             int sizeY = 20;
 
             Width = sizeX * 16 + 16;
-            Height = sizeY * 16 + 40;
+            Height = sizeY * 16 + 40+22;
             StartPosition = FormStartPosition.CenterScreen;
         }
 
@@ -53,7 +54,10 @@ namespace Maze
             {
                 labirint.Move(MazeObject.MoveDirection.Right);
             }
-
+            
+            stepsCount++;
+            toolStripStatusLabel1.Text = "Steps: " + stepsCount;
         }
+    
     }
 }

@@ -176,6 +176,12 @@ namespace Maze
         {
             parent.Text = "Health: " + Health +"%"+ " Medals: " + MedalsCollected + "/" + MedalsGenerated;
 
+            var status = parent.Controls[1];
+
+            //status. = "Health: " + Health + "%" + " Medals: " + MedalsCollected + "/" + MedalsGenerated;
+
+            //toolStripStatusLabel1
+
             if (MedalsCollected == MedalsGenerated && MedalsGenerated != 0)
             {
                 MessageBox.Show("You've collected all medals!\n\nYou won!");
