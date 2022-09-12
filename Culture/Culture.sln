@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Culture", "Culture\Culture.csproj", "{67E75175-33C8-42C9-868F-5E053023F117}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67E75175-33C8-42C9-868F-5E053023F117}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67E75175-33C8-42C9-868F-5E053023F117}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67E75175-33C8-42C9-868F-5E053023F117}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67E75175-33C8-42C9-868F-5E053023F117}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C36DED65-41E3-417B-8790-15F98B21A8CB}
+	EndGlobalSection
+EndGlobal
