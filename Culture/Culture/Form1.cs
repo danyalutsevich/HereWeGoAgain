@@ -21,13 +21,16 @@ namespace Culture
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+
             DateTime dt = DateTime.Now;
 
-            labelNewYorkTIme.Text = TimeZoneInfo.ConvertTimeBySystemTimeZoneId(dt, TimeZoneInfo.Local.Id, "Eastern Standard Time").ToString(new CultureInfo("en-US").DateTimeFormat); ;
+
+            labelNewYorkTIme.Text = TimeZoneInfo.ConvertTimeBySystemTimeZoneId(dt, TimeZoneInfo.Local.Id, "Eastern Standard Time").ToString(new CultureInfo("en-US").DateTimeFormat); 
             labelLondonTime.Text = TimeZoneInfo.ConvertTimeBySystemTimeZoneId(dt, TimeZoneInfo.Local.Id, "GMT Standard Time").ToString(new CultureInfo("en-GB").DateTimeFormat);
             labelCaliforniaTime.Text = TimeZoneInfo.ConvertTimeBySystemTimeZoneId(dt, TimeZoneInfo.Local.Id, "Pacific Standard Time").ToString(new CultureInfo("en-US").DateTimeFormat);
             labelTokyoTime.Text = TimeZoneInfo.ConvertTimeBySystemTimeZoneId(dt, TimeZoneInfo.Local.Id, "Tokyo Standard Time").ToString(new CultureInfo("ja-JP").DateTimeFormat);
             labelKyivTime.Text = TimeZoneInfo.ConvertTimeBySystemTimeZoneId(dt, TimeZoneInfo.Local.Id, "FLE Standard Time").ToString(new CultureInfo("uk-UA").DateTimeFormat);
+
 
         }
     }
