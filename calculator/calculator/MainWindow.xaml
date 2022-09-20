@@ -8,26 +8,26 @@
         Title="MainWindow" Height="800" Width="450">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*" ></RowDefinition>
             <RowDefinition Height="2*" ></RowDefinition>
         </Grid.RowDefinitions>
 
-        <TextBox x:Name="txt" Grid.Row="0" FontSize="48" FontFamily="Inter">
+        <TextBox x:Name="txt" Grid.Row="0" FontSize="48" FontFamily="Inter" Text="1233">
 
         </TextBox>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*" MinWidth="100"></ColumnDefinition>
+                <ColumnDefinition Width="*" MinWidth="100"></ColumnDefinition>
+                <ColumnDefinition Width="*" MinWidth="100"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*" MinHeight="100"></RowDefinition>
+                <RowDefinition Height="*" MinHeight="100"></RowDefinition>
+                <RowDefinition Height="*" MinHeight="100"></RowDefinition>
+                <RowDefinition Height="*" MinHeight="100"></RowDefinition>
+                <RowDefinition Height="*" MinHeight="100"></RowDefinition>
             </Grid.RowDefinitions>
 
             <Button Grid.Column="0" Grid.Row="0" Content="C" FontSize="36" FontFamily="Inter" FontWeight="Normal" FontStyle="Normal" Background="White" ></Button>
