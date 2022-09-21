@@ -1,0 +1,27 @@
+﻿<Window x:Class="Dock.Tabs"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dock"
+        mc:Ignorable="d"
+        Title="Tabs" Height="450" Width="800">
+    <Grid>
+
+        <TabControl>
+            <TabItem Header="Radio">
+                <!--<local:RadioButtons></local:RadioButtons>-->
+            </TabItem>
+            <TabItem Header="Slider">
+                <!--<local:SliderExample></local:SliderExample>-->
+            </TabItem>
+            <TabItem Header="Grids">
+                <!--<local:MainWindow></local:MainWindow>-->
+            </TabItem>
+            <TabItem Header="Loading...">
+                <!--<local:Window1></local:Window1>-->
+            </TabItem>
+        </TabControl>
+        
+    </Grid>
+</Window>
