@@ -1,0 +1,56 @@
+﻿<Window x:Class="MediaPlayer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MediaPlayer"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <ListBox Grid.Row="0" Grid.Column="0">
+        <MediaElement LoadedBehavior="Manual" x:Name="MediaElement" Source="1.avi" MediaOpened="MediaElement_MediaOpened">
+        </MediaElement>
+            <ListBox.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Play"  Click="Button_Click"></MenuItem>
+                    <MenuItem Header="Pause" Click="Button_Click_1"></MenuItem>
+                    <MenuItem Header="Stop" Click="Button_Click_2"></MenuItem>
+                    <MenuItem Header="Open" Click="Button_Click_3"></MenuItem>
+                </ContextMenu>
+            </ListBox.ContextMenu>
+        </ListBox>
+        <Slider x:Name="Slider" Grid.Row="1" Grid.Column="0" ValueChanged="Slider_ValueChanged"></Slider>
+
+        <Grid Grid.Row="2">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            
+        <Button Grid.Column="0" Click="Button_Click_3">Open</Button>
+
+            <Grid Grid.Column="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Click="Button_Click">Play</Button>
+                <Button Grid.Column="1" Click="Button_Click_1">Pause</Button>
+                <Button Grid.Column="2" Click="Button_Click_2">Stop</Button>
+            </Grid>
+        </Grid>
+    
+    </Grid>
+</Window>
