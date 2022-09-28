@@ -1,0 +1,14 @@
+﻿<Window x:Class="RoutingEvents.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RoutingEvents"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" KeyDown="TextBox_KeyDown">
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBox x:Name="Text" MinWidth="100" KeyDown="TextBox_KeyDown"></TextBox>
+        <CheckBox x:Name="Check">Bubled</CheckBox>
+    </StackPanel>
+
+</Window>

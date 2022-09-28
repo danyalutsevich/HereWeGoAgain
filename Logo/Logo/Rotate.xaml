@@ -1,0 +1,13 @@
+﻿<Window x:Class="Logo.Rotate"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Logo"
+        mc:Ignorable="d"
+        Title="Rotate" Height="450" Width="800" Loaded="Window_Loaded">
+
+    <StackPanel Margin="-687,-568,-687,-568">
+        <Image Stretch="Fill" x:Name="Hypno" Source="C:\Users\luche\Desktop\HereWeGoAgain\Logo\Logo\bin\Debug\net6.0-windows\disp3.jpg" RenderTransformOrigin="0.5,0.5" Width="1254" Height="1571"/>
+    </StackPanel>
+</Window>
