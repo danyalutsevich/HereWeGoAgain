@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TypeTrainer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" MinWidth="1200" Width="1200" Loaded="Window_Loaded" KeyDown="Window_KeyDown" KeyUp="Window_KeyUp">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
@@ -24,66 +24,66 @@
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="3*"></RowDefinition>
             </Grid.RowDefinitions>
-            <TextBlock Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Time"></TextBlock>
-            <TextBlock Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Text="CPS"></TextBlock>
-            <TextBlock Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Mistakes:"></TextBlock>
-            <TextBlock Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4" Background="Aquamarine" FontSize="24" Text="aoa aoa aoa aoa mmm"></TextBlock>
+            <TextBlock x:Name="TextTime" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Time"></TextBlock>
+            <TextBlock x:Name="TextCPS" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Text="CPS"></TextBlock>
+            <TextBlock x:Name="TextMistakes" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Mistakes:"></TextBlock>
+            <TextBlock x:Name="TrainingText" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4" Background="Aquamarine" FontSize="24" Text="aoa aoa aoa aoa mmm"></TextBlock>
         </Grid>
 
-        <Grid x:Name="KeyBoard" Grid.Row="1">
+        <Grid x:Name="KeyBoard" Grid.Row="1" Background="Wheat">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
-                
+
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
-                
+
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
-                
+
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
-                
+
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
-                
+
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
-                
+
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
-                
+
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
-                
+
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
-                
+
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
-                
+
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
-                
+
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
-                
+
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
-                
+
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
@@ -94,38 +94,216 @@
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
-                
+
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
 
             <Grid.Resources>
-                <Style TargetType="TextBlock">
+                <Style TargetType="Border">
+                    <!--<Setter Property="VerticalAlignment" Value="Center"></Setter>-->
+                    <Setter Property="Grid.ColumnSpan" Value="3"></Setter>
+                    <Setter Property="BorderBrush" Value="Black"></Setter>
+                    <Setter Property="BorderThickness" Value="5"></Setter>
+                    <Setter Property="CornerRadius" Value="10"></Setter>
+                    <!--<Setter Property="Panel.ZIndex" Value="0"></Setter>-->
                     
-                    <Setter Property="VerticalAlignment" Value="Center"></Setter>
+                </Style>
+                <Style TargetType="TextBlock">
                     <Setter Property="Padding" Value="10"></Setter>
                     <Setter Property="FontSize" Value="20"></Setter>
-                    <Setter Property="Grid.ColumnSpan" Value="3"></Setter>
                     <Setter Property="TextAlignment" Value="Center"></Setter>
+                    <Setter Property="FontFamily" Value="Consolas"></Setter>
                 </Style>
             </Grid.Resources>
-            
-            <TextBlock Grid.Row="0" Grid.Column="0" Background="IndianRed">`</TextBlock>
-            <TextBlock Grid.Row="0" Grid.Column="3" Background="IndianRed">1</TextBlock>
-            <TextBlock Grid.Row="0" Grid.Column="6" Background="IndianRed">2</TextBlock>
-            <TextBlock Grid.Row="0" Grid.Column="9" Background="Yellow">3</TextBlock>
-            <TextBlock Grid.Row="0" Grid.Column="12" Background="ForestGreen">4</TextBlock>
-            <TextBlock Grid.Row="0" Grid.Column="15" Background="LightBlue">5</TextBlock>
-            <TextBlock Grid.Row="0" Grid.Column="18" Background="LightBlue">6</TextBlock>
-            <TextBlock Grid.Row="0" Grid.Column="21" Background="MediumPurple">7</TextBlock>
-            <TextBlock Grid.Row="0" Grid.Column="24" Background="MediumPurple">8</TextBlock>
-            <TextBlock Grid.Row="0" Grid.Column="27" Background="IndianRed">9</TextBlock>
-            <TextBlock Grid.Row="0" Grid.Column="30" Background="Yellow">0</TextBlock>
-            <TextBlock Grid.Row="0" Grid.Column="33" Background="ForestGreen">-</TextBlock>
-            <TextBlock Grid.Row="0" Grid.Column="36" Background="ForestGreen">=</TextBlock>
-            <TextBlock Grid.Row="0" Grid.Column="39" Background="LightGray" Grid.ColumnSpan="5">Backspace</TextBlock>
-            
+
+            <Border Grid.Row="0" Grid.Column="0">
+                <TextBlock Background="IndianRed" Tag="Oem3">`</TextBlock>
+            </Border>
+            <Border Grid.Row="0" Grid.Column="3">
+                <TextBlock Background="IndianRed" Tag="D1">1</TextBlock>
+            </Border>
+            <Border Grid.Row="0" Grid.Column="6">
+                <TextBlock Background="IndianRed" Tag="D2">2</TextBlock>
+            </Border>
+            <Border Grid.Row="0" Grid.Column="9">
+                <TextBlock Background="Yellow" Tag="D3">3</TextBlock>
+            </Border>
+            <Border Grid.Row="0" Grid.Column="12">
+                <TextBlock Background="ForestGreen" Tag="D4">4</TextBlock>
+            </Border>
+            <Border Grid.Row="0" Grid.Column="15">
+                <TextBlock Background="LightBlue" Tag="D5">5</TextBlock>
+            </Border>
+            <Border Grid.Row="0" Grid.Column="18">
+                <TextBlock Background="LightBlue" Tag="D6">6</TextBlock>
+            </Border>
+            <Border Grid.Row="0" Grid.Column="21">
+                <TextBlock Background="MediumPurple" Tag="D7">7</TextBlock>
+            </Border>
+            <Border Grid.Row="0" Grid.Column="24">
+                <TextBlock Background="MediumPurple" Tag="D8">8</TextBlock>
+            </Border>
+            <Border Grid.Row="0" Grid.Column="27">
+                <TextBlock Background="IndianRed" Tag="D9">9</TextBlock>
+            </Border>
+            <Border Grid.Row="0" Grid.Column="30">
+                <TextBlock Background="Yellow" Tag="D0">0</TextBlock>
+            </Border>
+            <Border Grid.Row="0" Grid.Column="33">
+                <TextBlock Background="ForestGreen" Tag="OemMinus">-</TextBlock>
+            </Border>
+            <Border Grid.Row="0" Grid.Column="36">
+                <TextBlock Background="ForestGreen" Tag="OemPlus">=</TextBlock>
+            </Border>
+            <Border Grid.Row="0" Grid.Column="39" Grid.ColumnSpan="5">
+                <TextBlock Background="LightGray" Tag="Back">Backspace</TextBlock>
+            </Border>
+<!--Row-->
+            <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4">
+                <TextBlock Background="LightGray" Grid.ColumnSpan="4" Tag="Tab">TAB</TextBlock>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="4">
+                <TextBlock Background="IndianRed" Tag="Q">Q</TextBlock>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="7">
+                <TextBlock Background="Yellow" Tag="W">W</TextBlock>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="10">
+                <TextBlock Background="ForestGreen" Tag="E">E</TextBlock>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="13">
+                <TextBlock Background="LightBlue" Tag="R">R</TextBlock>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="16">
+                <TextBlock Background="LightBlue" Tag="T">T</TextBlock>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="19">
+                <TextBlock Background="MediumPurple" Tag="Y">Y</TextBlock>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="22">
+                <TextBlock Background="MediumPurple" Tag="U">U</TextBlock>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="25">
+                <TextBlock Background="IndianRed" Tag="I">I</TextBlock>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="28">
+                <TextBlock Background="Yellow" Tag="O">O</TextBlock>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="31">
+                <TextBlock Background="ForestGreen" Tag="P">P</TextBlock>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="34">
+                <TextBlock Background="ForestGreen" Tag="OemOpenBrackets">[</TextBlock>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="37">
+                <TextBlock Background="ForestGreen" Tag="Oem6">]</TextBlock>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="40" Grid.ColumnSpan="4">
+                <TextBlock Background="ForestGreen" Tag="Oem5">\</TextBlock>
+            </Border>
+            <!--Row-->
+            <Border Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="5">
+                <TextBlock Background="LightGray" Tag="Capital">Caps Lock</TextBlock>
+            </Border>
+            <Border Grid.Row="2" Grid.Column="5">
+                <TextBlock Background="IndianRed" Tag="A">A</TextBlock>
+            </Border>
+            <Border Grid.Row="2" Grid.Column="8" >
+                <TextBlock Background="Yellow" Tag="S">S</TextBlock>
+            </Border>
+            <Border Grid.Row="2" Grid.Column="11">
+                <TextBlock Background="ForestGreen" Tag="D">D</TextBlock>
+            </Border>
+            <Border Grid.Row="2" Grid.Column="14">
+                <TextBlock Background="LightBlue" Tag="F">F</TextBlock>
+            </Border>
+            <Border Grid.Row="2" Grid.Column="17">
+                <TextBlock Background="LightBlue" Tag="G">G</TextBlock>
+            </Border>
+            <Border Grid.Row="2" Grid.Column="20">
+                <TextBlock Background="MediumPurple" Tag="H">H</TextBlock>
+            </Border>
+            <Border Grid.Row="2" Grid.Column="23">
+                <TextBlock Background="MediumPurple" Tag="J">J</TextBlock>
+            </Border>
+            <Border Grid.Row="2" Grid.Column="26">
+                <TextBlock Background="IndianRed" Tag="K">K</TextBlock>
+            </Border>
+            <Border Grid.Row="2" Grid.Column="29">
+                <TextBlock Background="Yellow" Tag="L">L</TextBlock>
+            </Border>
+            <Border Grid.Row="2" Grid.Column="32">
+                <TextBlock Background="ForestGreen" Tag="Oem1">;</TextBlock>
+            </Border>
+            <Border Grid.Row="2" Grid.Column="35">
+                <TextBlock Background="ForestGreen" Tag="OemQuotes">'</TextBlock>
+            </Border>
+            <Border Grid.Row="2" Grid.Column="38" Grid.ColumnSpan="6">
+                <TextBlock Background="LightGray" Tag="Return">Enter</TextBlock>
+            </Border>
+            <!--Row-->
+            <Border Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="6">
+                <TextBlock Background="LightGray" Tag="LeftShift">Shift</TextBlock>
+            </Border>
+            <Border Grid.Row="3" Grid.Column="6">
+                <TextBlock Background="IndianRed" Tag="Z">Z</TextBlock>
+            </Border>
+            <Border Grid.Row="3" Grid.Column="9">
+                <TextBlock Background="Yellow" Tag="X">X</TextBlock>
+            </Border>
+            <Border Grid.Row="3" Grid.Column="12">
+                <TextBlock Background="ForestGreen" Tag="C">C</TextBlock>
+            </Border>
+            <Border Grid.Row="3" Grid.Column="15">
+                <TextBlock Background="LightBlue" Tag="V">V</TextBlock>
+            </Border>
+            <Border Grid.Row="3" Grid.Column="18">
+                <TextBlock Background="LightBlue" Tag="B">B</TextBlock>
+            </Border>
+            <Border Grid.Row="3" Grid.Column="21">
+                <TextBlock Background="MediumPurple" Tag="N">N</TextBlock>
+            </Border>
+            <Border Grid.Row="3" Grid.Column="24">
+                <TextBlock Background="MediumPurple" Tag="M">M</TextBlock>
+            </Border>
+            <Border Grid.Row="3" Grid.Column="27">
+                <TextBlock Background="IndianRed" Tag="OemComma">,</TextBlock>
+            </Border>
+            <Border Grid.Row="3" Grid.Column="30">
+                <TextBlock Background="Yellow" Tag="OemPeriod">.</TextBlock>
+            </Border>
+            <Border Grid.Row="3" Grid.Column="33">
+                <TextBlock Background="ForestGreen" Tag="OemQuestion">/</TextBlock>
+            </Border>
+            <Border Grid.Row="3" Grid.Column="36" Grid.ColumnSpan="8">
+                <TextBlock Background="LightGray" Tag="RightShift">Shift</TextBlock>
+            </Border>
+            <!--Row-->
+            <Border Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4">
+                <TextBlock Background="LightGray" Tag="LeftCtrl">Ctrl</TextBlock>
+            </Border>
+            <Border Grid.Row="4" Grid.Column="4" Grid.ColumnSpan="4">
+                <TextBlock Background="LightGray" Tag="LWin">Win</TextBlock>
+            </Border>
+            <Border Grid.Row="4" Grid.Column="8" Grid.ColumnSpan="4">
+                <TextBlock Background="LightGray" Tag="System">Alt</TextBlock>
+            </Border>
+            <Border Grid.Row="4" Grid.Column="12" Grid.ColumnSpan="20">
+                <TextBlock Background="LightGray" Tag="Space" Text=" "> </TextBlock>
+            </Border>
+            <Border Grid.Row="4" Grid.Column="32" Grid.ColumnSpan="4">
+                <TextBlock Background="LightGray" Tag="Fn">Fn</TextBlock>
+            </Border>
+            <Border Grid.Row="4" Grid.Column="36" Grid.ColumnSpan="4">
+                <TextBlock Background="LightGray" Tag="Apps">Apps</TextBlock>
+            </Border>
+            <Border Grid.Row="4" Grid.Column="40" Grid.ColumnSpan="4">
+                <TextBlock Background="LightGray" Tag="RightCtrl">Ctrl</TextBlock>
+            </Border>
+
+
         </Grid>
-    
+
     </Grid>
 </Window>
