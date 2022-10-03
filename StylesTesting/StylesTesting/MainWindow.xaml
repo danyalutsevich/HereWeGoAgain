@@ -1,0 +1,35 @@
+﻿<Window x:Class="StylesTesting.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StylesTesting"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <Grid.Resources>
+            <Style TargetType="Button">
+                <Setter Property="Margin" Value="12"></Setter>
+                <Setter Property="BorderBrush" Value="Red"></Setter>
+                <Setter Property="BorderThickness" Value="12"></Setter>
+                <Setter Property="FontFamily" Value="Cheee Demo Small"></Setter>
+                <Setter Property="FontSize" Value="30"></Setter>
+            </Style>
+        </Grid.Resources>
+
+        <Button Grid.Column="0" Grid.Row="0">Red Button</Button>
+        <Button Grid.Column="0" Grid.Row="1">Blue Button</Button>
+        
+        
+    </Grid>
+</Window>

@@ -1,0 +1,42 @@
+﻿<Window x:Class="DocReader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DocReader"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <ListBox x:Name="Recipies" SelectionChanged="ListBox_SelectionChanged">
+            <ListBoxItem>Желе с черносливом</ListBoxItem>
+            <ListBoxItem>Заяц в фольге</ListBoxItem>
+            <ListBoxItem>Желейный торт с бисквитом «2012»</ListBoxItem>
+            <ListBoxItem>Грибные трубочки</ListBoxItem>
+            <ListBoxItem>База из хрена</ListBoxItem>
+        </ListBox>
+        <StackPanel Grid.Column="1">
+
+            <Image x:Name="image" MaxHeight="200" Source="https://www.prostovkusno.com.ua/images/2013/20.01/zayats-v-folge.jpg"></Image>
+            <FlowDocumentScrollViewer x:Name="Document" Loaded="FlowDocumentReader_Loaded">
+            <FlowDocument>
+                <Paragraph>Name</Paragraph>
+                
+                <Paragraph>Ingredients</Paragraph>
+                <Paragraph>Steps</Paragraph>
+            </FlowDocument>
+
+        </FlowDocumentScrollViewer>
+        </StackPanel>
+
+    </Grid>
+</Window>

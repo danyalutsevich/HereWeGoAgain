@@ -1,0 +1,131 @@
+﻿<Window x:Class="TypeTrainer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TypeTrainer"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="3*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Time"></TextBlock>
+            <TextBlock Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Text="CPS"></TextBlock>
+            <TextBlock Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Mistakes:"></TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4" Background="Aquamarine" FontSize="24" Text="aoa aoa aoa aoa mmm"></TextBlock>
+        </Grid>
+
+        <Grid x:Name="KeyBoard" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid.Resources>
+                <Style TargetType="TextBlock">
+                    
+                    <Setter Property="VerticalAlignment" Value="Center"></Setter>
+                    <Setter Property="Padding" Value="10"></Setter>
+                    <Setter Property="FontSize" Value="20"></Setter>
+                    <Setter Property="Grid.ColumnSpan" Value="3"></Setter>
+                    <Setter Property="TextAlignment" Value="Center"></Setter>
+                </Style>
+            </Grid.Resources>
+            
+            <TextBlock Grid.Row="0" Grid.Column="0" Background="IndianRed">`</TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="3" Background="IndianRed">1</TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="6" Background="IndianRed">2</TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="9" Background="Yellow">3</TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="12" Background="ForestGreen">4</TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="15" Background="LightBlue">5</TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="18" Background="LightBlue">6</TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="21" Background="MediumPurple">7</TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="24" Background="MediumPurple">8</TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="27" Background="IndianRed">9</TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="30" Background="Yellow">0</TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="33" Background="ForestGreen">-</TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="36" Background="ForestGreen">=</TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="39" Background="LightGray" Grid.ColumnSpan="5">Backspace</TextBlock>
+            
+        </Grid>
+    
+    </Grid>
+</Window>
