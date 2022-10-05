@@ -1,0 +1,18 @@
+﻿<Window x:Class="Binding.Rectangle"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Binding"
+        mc:Ignorable="d"
+        Title="Rectangle" Height="450" Width="800" MouseDown="Window_MouseDown" MouseUp="Window_MouseUp" MouseMove="Window_MouseMove">
+
+    <StackPanel MouseDown="StackPanel_MouseDown">
+        <TextBox x:Name="left">40</TextBox>
+        <TextBox x:Name="top">40</TextBox>
+        <Canvas x:Name="canvas" MouseDown="canvas_MouseDown">
+            <Rectangle x:Name="Rect" Width="200" Height="100" Fill="Red" Canvas.Left="{Binding ElementName=left,Path=Text, Mode=TwoWay}" Canvas.Top="{Binding ElementName=top, Path=Text, Mode=TwoWay}" MouseUp="Rectangle_MouseUp" MouseDown="Rectangle_MouseDown"></Rectangle>
+        </Canvas>
+    </StackPanel>
+    <!--<Rectangle Width="200" Height="100" Fill="Red"></Rectangle>-->
+</Window>
