@@ -10,10 +10,12 @@ namespace Binding
 {
     public class PersonTest : INotifyPropertyChanged
     {
-        public string? _name = "name from class";
-        public string? _surname = "surname form class";
-        public int _age = 32;
+        private string? _name = "name from class";
+        private string? _surname = "surname form class";
+        private int _age = 32;
 
+        public event PropertyChangedEventHandler? PropertyChanged;
+        
         public string? name
         {
             get { return _name; }
@@ -41,9 +43,6 @@ namespace Binding
                 PropertyChanged(this, new PropertyChangedEventArgs("age"));
             }
         }
-
-        public event PropertyChangedEventHandler? PropertyChanged;
-
         public override string ToString()
         {
             return name + " " + surname + " " + age;
