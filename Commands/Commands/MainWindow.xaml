@@ -1,0 +1,30 @@
+﻿<Window x:Class="CommandsWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:CommandsWPF"
+        Title="MainWindow" Height="350" Width="525">
+
+    <Window.InputBindings>
+        <KeyBinding Command="local:ColorCommands.RedCommand" Key="R" Modifiers="Control" />
+        <KeyBinding Command="local:ColorCommands.GreenCommand" Key="G" Modifiers="Control" />
+        <KeyBinding Command="local:ColorCommands.BlueCommand" Key="B" Modifiers="Control" />
+        <KeyBinding Command="local:ColorCommands.RandomCommand" Key="R" Modifiers="Shift" />
+    </Window.InputBindings>
+    <Window.CommandBindings>
+        <CommandBinding Command="local:ColorCommands.RedCommand" Executed="RedColor"/>
+        <CommandBinding Command="local:ColorCommands.GreenCommand" Executed="GreenColor"/>
+        <CommandBinding Command="local:ColorCommands.BlueCommand" Executed="BlueColor"/>
+        <CommandBinding Command="local:ColorCommands.RandomCommand" Executed="RandomColor"/>
+    </Window.CommandBindings>
+    <StackPanel GotFocus="StackPanel_GotFocus">
+        <Button x:Name="Button1" Width="80" Height="30" Content="Color" Click="Button1_Click" />
+        <TextBox></TextBox>
+        <TextBox></TextBox>
+        <TextBox></TextBox>
+        <TextBox></TextBox>
+        <TextBox></TextBox>
+        <TextBox></TextBox>
+        <TextBox></TextBox>
+        <TextBox></TextBox>
+    </StackPanel>
+</Window>
