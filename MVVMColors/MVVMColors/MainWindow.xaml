@@ -1,0 +1,56 @@
+﻿<Window x:Class="MVVMColors.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MVVMColors"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0" Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="8*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid.Resources>
+                <Style TargetType="Label">
+                    <Setter Property="FontSize" Value="22"></Setter>
+                </Style>
+            </Grid.Resources>
+
+            <Label Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">RED</Label>
+            <Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">GREEN</Label>
+            <Label Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">BLUE</Label>
+            <Label Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">ALPHA</Label>
+
+            <Slider x:Name="Rslider" Grid.Row="0" Grid.Column="1" Minimum="0" Maximum="255" Value="168" ValueChanged="Rslider_ValueChanged"></Slider>
+            <Slider x:Name="Gslider" Grid.Row="1" Grid.Column="1" Minimum="0" Maximum="255" Value="168" ValueChanged="Rslider_ValueChanged"></Slider>
+            <Slider x:Name="Bslider" Grid.Row="2" Grid.Column="1" Minimum="0" Maximum="255" Value="168" ValueChanged="Rslider_ValueChanged"></Slider>
+            <Slider x:Name="Aslider" Grid.Row="3" Grid.Column="1" Minimum="0" Maximum="255" Value="168" ValueChanged="Rslider_ValueChanged"></Slider>
+        </Grid>
+
+        <StackPanel Grid.Row="1">
+            <Button x:Name="BAdd" FontSize="22" Click="Button_Click">Add</Button>
+            <ListBox x:Name="listbox" Height="150">
+            </ListBox>
+        
+        </StackPanel>
+        
+    </Grid>
+</Window>
