@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,46 +22,46 @@ namespace MVVMColors
     /// </summary>
     public partial class MainWindow : Window
     {
-        private List<ListBoxItem> colorList = new();
+        ColorContainerVM VMColora;
 
         public MainWindow()
         {
             InitializeComponent();
-            flag = true;
+            //VMColor = new();
+            DataContext = VMColor;
+            VMColor.PropertyChanged += PropChanged;
+
         }
 
-        bool flag = false;
+        private void PropChanged(object sender, PropertyChangedEventArgs e)
+        {
+            //VMColor.A = (int)Aslider.Value;
+            //VMColor.R = (int)Rslider.Value;
+            //VMColor.G = (int)Gslider.Value;
+            //VMColor.B = (int)Bslider.Value;
+            try
+            {
+                BAdd.Background = new SolidColorBrush(Color.FromArgb((byte)VMColor.A, (byte)VMColor.R, (byte)VMColor.G, (byte)VMColor.B));
+            }
+            catch { }
+        }
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var color = new ColorContainer() { R = (int)Rslider.Value, G = (int)Gslider.Value, B = (int)Bslider.Value, A = (int)Aslider.Value };
-           
+            //var color = new ColorContainer() { R = VMColor.R, G = VMColor.G, B = VMColor.B, A = VMColor.A };
 
-            colorList.Add(new ListBoxItem {Background= new SolidColorBrush(Color.FromArgb((byte)color.A, (byte)color.R, (byte)color.G, (byte)color.B)), Content = color });
+            var data = DataContext as ColorContainerVM;
+            data.colorList.Add(new ListBoxItem() { Content = data.model , Background = new SolidColorBrush() { Color = Color.FromArgb((byte) data.A, (byte)data.R, (byte)data.G, (byte)data.B) } });
+
             //listbox.Items.Clear();
-            listbox.Items.Add(colorList[colorList.Count-1]);
-
+            listbox.Items.Add(VMColor.colorList[VMColor.colorList.Count - 1]);
         }
 
         private void Rslider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            if(flag)
-            BAdd.Background = new SolidColorBrush(Color.FromArgb((byte)Aslider.Value, (byte)Rslider.Value, (byte)Gslider.Value, (byte)Bslider.Value));
         }
     }
 
-    class ColorContainer
-    {
-        public int R { get; set; }
-        public int G { get; set; }
-        public int B { get; set; }
-        public int A { get; set; }
 
-        public override string ToString()
-        {
-            return $"R:{R}G:{G}B:{B}A:{A}";
-        }
-
-
-    }
 }
