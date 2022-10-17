@@ -12,6 +12,10 @@
             <Setter Property="Margin" Value="10"></Setter>
             <Setter Property="CornerRadius" Value="15"></Setter>
             <Setter Property="Background" Value="LightGray"></Setter>
+            <Setter Property="BorderBrush" Value="Black"></Setter>
+            <Setter Property="BorderThickness" Value="15"></Setter>
+            <Setter Property="ClipToBounds" Value="True"></Setter>
+            <Setter Property="Background" Value="{Binding RelativeSource={RelativeSource Self},Path=Child.}"></Setter>
         </Style>
         <Style TargetType="Label">
             <Setter Property="HorizontalAlignment" Value="Center"></Setter>
@@ -19,9 +23,66 @@
             <Setter Property="FontSize" Value="60"></Setter>
             <Setter Property="FontFamily" Value="Yu Gothic UI Semibold"></Setter>
             <Setter Property="Foreground" Value="Gray"></Setter>
+            <Setter Property="Width" Value="200"></Setter>
+            <Setter Property="Height" Value="200"></Setter>
+            <Setter Property="OpacityMask" Value="{Binding}"></Setter>
+            <Setter Property="ClipToBounds" Value="True"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+            <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+            <Style.Triggers>
+                <Trigger Property="Content" Value="2">
+                    <Setter Property="Background" Value="#eee4da"></Setter>
+                </Trigger>
+                <Trigger Property="Content" Value="4">
+                    <Setter Property="Background" Value="#eee1c9"></Setter>
+                </Trigger>
+                <Trigger Property="Content" Value="8">
+                    <Setter Property="Background" Value="#f3b27a"></Setter>
+                    <Setter Property="Foreground" Value="White"></Setter>
+                </Trigger>
+                <Trigger Property="Content" Value="16">
+                    <Setter Property="Background" Value="#f69664"></Setter>
+                    <Setter Property="Foreground" Value="White"></Setter>
+                </Trigger>
+                <Trigger Property="Content" Value="32">
+                    <Setter Property="Background" Value="#f77c5f"></Setter>
+                    <Setter Property="Foreground" Value="White"></Setter>
+                </Trigger>
+                <Trigger Property="Content" Value="64">
+                    <Setter Property="Background" Value="#f75f3b"></Setter>
+                    <Setter Property="Foreground" Value="White"></Setter>
+                </Trigger>
+                <Trigger Property="Content" Value="128">
+                    <Setter Property="Background" Value="#edd073"></Setter>
+                    <Setter Property="FontSize" Value="50"></Setter>
+                    <Setter Property="Foreground" Value="White"></Setter>
+                </Trigger>
+                <Trigger Property="Content" Value="256">
+                    <Setter Property="Background" Value="#edcc62"></Setter>
+                    <Setter Property="FontSize" Value="50"></Setter>
+                    <Setter Property="Foreground" Value="White"></Setter>
+                </Trigger>
+                <Trigger Property="Content" Value="512">
+                    <Setter Property="Background" Value="#edc950"></Setter>
+                    <Setter Property="FontSize" Value="50"></Setter>
+                    <Setter Property="Foreground" Value="White"></Setter>
+                </Trigger>
+                <Trigger Property="Content" Value="1024">
+                    <Setter Property="Background" Value="#edc53f"></Setter>
+                    <Setter Property="FontSize" Value="40"></Setter>
+                    <Setter Property="Foreground" Value="White"></Setter>
+                </Trigger>
+                <Trigger Property="Content" Value="2048">
+                    <Setter Property="Background" Value="#edc22e"></Setter>
+                    <Setter Property="FontSize" Value="40"></Setter>
+                    <Setter Property="Foreground" Value="White"></Setter>
+                </Trigger>
+            </Style.Triggers>
         </Style>
-        
-        
+
+
     </Window.Resources>
 
 
@@ -50,46 +111,78 @@
                 </StackPanel>
             </Border>
         </Grid>
-        
+
         <Border Grid.Row="1" Background="#FFCAAC8E">
 
             <Grid Background="#0000"  Margin="10">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-            </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
 
-          
-
-            <Border Grid.Column="0" Grid.Row="0"><Label>2</Label></Border>
-            <Border Grid.Column="1" Grid.Row="0"><Label>2</Label></Border>
-            <Border Grid.Column="2" Grid.Row="0"><Label>2</Label></Border>
-            <Border Grid.Column="3" Grid.Row="0"><Label>2</Label></Border>
-            <Border Grid.Column="0" Grid.Row="1"><Label>2</Label></Border>
-            <Border Grid.Column="1" Grid.Row="1"><Label>2</Label></Border>
-            <Border Grid.Column="2" Grid.Row="1"><Label>2</Label></Border>
-            <Border Grid.Column="3" Grid.Row="1"><Label>2</Label></Border>
-            <Border Grid.Column="0" Grid.Row="2"><Label>2</Label></Border>
-            <Border Grid.Column="1" Grid.Row="2"><Label>2</Label></Border>
-            <Border Grid.Column="2" Grid.Row="2"><Label>2</Label></Border>
-            <Border Grid.Column="3" Grid.Row="2"><Label>2</Label></Border>
-            <Border Grid.Column="0" Grid.Row="3"><Label>2</Label></Border>
-            <Border Grid.Column="1" Grid.Row="3"><Label>2</Label></Border>
-            <Border Grid.Column="2" Grid.Row="3"><Label>2</Label></Border>
-            <Border Grid.Column="3" Grid.Row="3"><Label>2</Label></Border>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
 
 
 
-        </Grid>
+                <Border Grid.Column="0" Grid.Row="0">
+                    <Label>2</Label>
+                </Border>
+                <Border Grid.Column="1" Grid.Row="0">
+                    <Label>4</Label>
+                </Border>
+                <Border Grid.Column="2" Grid.Row="0">
+                    <Label>8</Label>
+                </Border>
+                <Border Grid.Column="3" Grid.Row="0">
+                    <Label>16</Label>
+                </Border>
+                <Border Grid.Column="0" Grid.Row="1">
+                    <Label>32</Label>
+                </Border>
+                <Border Grid.Column="1" Grid.Row="1">
+                    <Label>64</Label>
+                </Border>
+                <Border Grid.Column="2" Grid.Row="1">
+                    <Label>128</Label>
+                </Border>
+                <Border Grid.Column="3" Grid.Row="1">
+                    <Label>256</Label>
+                </Border>
+                <Border Grid.Column="0" Grid.Row="2">
+                    <Label>512</Label>
+                </Border>
+                <Border Grid.Column="1" Grid.Row="2">
+                    <Label>1024</Label>
+                </Border>
+                <Border Grid.Column="2" Grid.Row="2">
+                    <Label>2048</Label>
+                </Border>
+                <Border Grid.Column="3" Grid.Row="2">
+                    <Label></Label>
+                </Border>
+                <Border Grid.Column="0" Grid.Row="3">
+                    <Label></Label>
+                </Border>
+                <Border Grid.Column="1" Grid.Row="3">
+                    <Label></Label>
+                </Border>
+                <Border Grid.Column="2" Grid.Row="3">
+                    <Label></Label>
+                </Border>
+                <Border Grid.Column="3" Grid.Row="3">
+                    <Label></Label>
+                </Border>
+
+
+
+            </Grid>
         </Border>
     </Grid>
 </Window>
