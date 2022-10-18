@@ -27,6 +27,10 @@ namespace Resume
         public MainWindow()
         {
             InitializeComponent();
+            //var theme = "UXMusingsGreen";
+            //string packUri = String.Format(@"/WPF.Themes;component/{0}/Theme.xaml", theme);
+            //_=Application.LoadComponent(new Uri(packUri, UriKind.Relative)) as ResourceDictionary;
+
         }
 
         List<ResumeObject> resumeList = new();
